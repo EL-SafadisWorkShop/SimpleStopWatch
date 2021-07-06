@@ -45,10 +45,10 @@ function App() {
         {timerOn &&(
         <button onClick={() => setTimeOn(false)}>Stop</button>
         )}
-        {timerOn && time !== 0 && (
+        {!timerOn && time !== 0 && (
           <button onClick= {() => setTimeOn(true)}>Resume</button>
         )}
-        {!timerOn && time > 0 &&(
+        {!timerOn && time > 0 && (
         <button onClick= {() => setTime(0)}>Reset</button>
         )}
       </div>
